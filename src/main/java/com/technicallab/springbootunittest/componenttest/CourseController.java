@@ -40,4 +40,9 @@ public class CourseController {
 
     }
 
+    @GetMapping("/callapi")
+    public String callExternalAPI() {
+        return courseService.callExternalAPI();
+    }
+
 }
