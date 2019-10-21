@@ -26,8 +26,8 @@ public class SquareTester {
 
     @Test
     public void DimensionThreeReturnAreaNine(){
-        when(calculator.multiple(3,3)).thenReturn(9);
-        assertEquals(square.area(3) , 9);
+        when(calculator.multiple(4,4)).thenReturn(16);
+        assertEquals(square.area(4) , 16);
     }
 
     @Test
