@@ -21,22 +21,13 @@ public class SquareTester {
     @Test
     public void DimensionTwoReturnAreaFour(){
         when(calculator.multiple(2,2)).thenReturn(4);
-        assertEquals(square.area(2) , 4);
+        assertEquals(4, square.area(2));
     }
 
     @Test
     public void DimensionThreeReturnAreaNine(){
         when(calculator.multiple(4,4)).thenReturn(16);
-        assertEquals(square.area(4) , 16);
+        assertEquals(16, square.area(4));
     }
 
-    @Test
-    public void DimensionTwoReturnLengthEight(){
-
-    }
-
-    @Test
-    public void DimensionThreeReturnLengthTwelve(){
-
-    }
 }
