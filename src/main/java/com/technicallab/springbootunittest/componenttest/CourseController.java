@@ -17,9 +17,7 @@ public class CourseController {
     public Course enrollCourse(
             @Valid @RequestBody Course course) {
 
-        Course enrollingCourse = courseService.add(course);
-
-        return enrollingCourse;
+        return courseService.add(course);
 
     }
 
