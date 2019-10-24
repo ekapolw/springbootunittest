@@ -46,8 +46,8 @@ public class CourseNonServerTester {
     String contentAsString = result.getResponse().getContentAsString();
     Course enrolledCourse = objectMapper.readValue(contentAsString, Course.class);
 
-    assertEquals(enrolledCourse.getCode(), "MATH101");
-    assertEquals(enrolledCourse.getName(), "Math");
+    assertEquals("MATH101", enrolledCourse.getCode());
+    assertEquals("Math", enrolledCourse.getName());
   }
 
   @Test

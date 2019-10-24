@@ -48,8 +48,8 @@ public class UserControllerTester {
         String contentAsString = result.getResponse().getContentAsString();
         User addedUser = objectMapper.readValue(contentAsString, User.class);
 
-        assertEquals(addedUser.getId().intValue(), 1);
-        assertEquals(addedUser.getName(), "Ekapol");
+        assertEquals(1, addedUser.getId().intValue());
+        assertEquals("Ekapol", addedUser.getName());
 
     }
 

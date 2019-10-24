@@ -25,23 +25,19 @@ public class SquareSpringBootTester {
     @Test
     public void DimensionTwoReturnAreaFour(){
         when(calculator.multiple(2,2)).thenReturn(4);
-        assertEquals(square.area(2) , 4);
+        assertEquals(1, square.area(2));
     }
 
     @Test
     public void DimensionThreeReturnAreaNine(){
         when(calculator.multiple(3,3)).thenReturn(9);
-        assertEquals(square.area(3) , 9);
+        assertEquals(9, square.area(3));
     }
 
     @Test
     public void DimensionTwoReturnLengthEight(){
         when(calculator.add(2,2)).thenReturn(4);
-        assertEquals(square.length(2) , 8);
+        assertEquals(8, square.length(2));
     }
 
-    @Test
-    public void DimensionThreeReturnLengthTwelve(){
-
-    }
 }
