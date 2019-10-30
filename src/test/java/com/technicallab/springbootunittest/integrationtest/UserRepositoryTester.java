@@ -3,7 +3,6 @@ package com.technicallab.springbootunittest.integrationtest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import org.hibernate.annotations.SQLDelete;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -22,16 +22,18 @@ import org.springframework.test.web.servlet.MvcResult;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class CourseNonServerTester {
+public class CourseNonServerWithMockTester {
 
   @Autowired private MockMvc mockMvc;
   @Autowired private ObjectMapper objectMapper;
-  @MockBean private CourseService courseService;
+  @MockBean private CourseRepository courseRepository;
 
   @Test
   public void whenAddCourseThenReturnCourse() throws Exception {
 
     Course course = new Course("MATH101", "Math");
+
+    when(courseRepository.save(course)).thenReturn(course);
 
     MvcResult result =
         mockMvc
@@ -62,7 +64,7 @@ public class CourseNonServerTester {
   @Test
   public void whenCallExternalAPIThenReturnHello() throws Exception {
 
-    when(courseService.callExternalAPI()).thenReturn("Hello External API");
+    //when(courseService.callExternalAPI()).thenReturn("Hello External API");
 
     mockMvc
         .perform(get("/callapi").contentType("application/json"))
